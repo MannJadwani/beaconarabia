@@ -77,7 +77,7 @@ const About = (props) => {
                             <div className="flex items-center space-x-6">
                                 <Link 
                                     onClick={ClickHandler} 
-                                    href="/about" 
+                                    href="/solutions" 
                                     className="bg-[#c0b596] cursor-pointer text-[16px] font-semibold text-white px-[38px] py-[12px] rounded-lg capitalize inline-block transition ease-in-out duration-300 hover:bg-[#d4c291] shadow-md hover:shadow-lg"
                                 >
                                     Learn More

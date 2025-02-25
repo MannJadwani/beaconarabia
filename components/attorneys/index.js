@@ -19,9 +19,8 @@ const Attorney = (props) => {
             "Specialist in business setup and development"
         ],
         socialLinks: {
-            linkedin: "#",
-            twitter: "#",
-            facebook: "#"
+            linkedin: "https://www.linkedin.com/in/pratapnathani/",
+            twitter: "https://x.com/pratapnathani?lang=ar"
         }
     };
 
@@ -79,14 +78,11 @@ const Attorney = (props) => {
                                 </div>
 
                                 <div className="flex space-x-4">
-                                    <Link href={founderInfo.socialLinks.linkedin} className="w-10 h-10 rounded-full bg-[#c0b596] flex items-center justify-center text-white hover:bg-[#272c3f] transition-all">
+                                    <Link href={founderInfo.socialLinks.linkedin} target="_blank" rel="noopener noreferrer" className="w-10 h-10 rounded-full bg-[#c0b596] flex items-center justify-center text-white hover:bg-[#272c3f] transition-all">
                                         <i className="fa fa-linkedin"></i>
                                     </Link>
-                                    <Link href={founderInfo.socialLinks.twitter} className="w-10 h-10 rounded-full bg-[#c0b596] flex items-center justify-center text-white hover:bg-[#272c3f] transition-all">
+                                    <Link href={founderInfo.socialLinks.twitter} target="_blank" rel="noopener noreferrer" className="w-10 h-10 rounded-full bg-[#c0b596] flex items-center justify-center text-white hover:bg-[#272c3f] transition-all">
                                         <i className="fa fa-twitter"></i>
-                                    </Link>
-                                    <Link href={founderInfo.socialLinks.facebook} className="w-10 h-10 rounded-full bg-[#c0b596] flex items-center justify-center text-white hover:bg-[#272c3f] transition-all">
-                                        <i className="fa fa-facebook"></i>
                                     </Link>
                                 </div>
                             </div>

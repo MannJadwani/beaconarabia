@@ -40,7 +40,7 @@ const Practice = (props) => {
                                     <p className="text-[#777] text-[15px] leading-relaxed mb-4">{practice.description}</p>
                                     <Link 
                                         onClick={ClickHandler} 
-                                        href={`/practice-single/${practice.slug}`}
+                                        href="/solutions"
                                         className="inline-block text-[#c0b596] text-[14px] font-semibold hover:text-[#272c3f] transition-all duration-300"
                                     >
                                         Learn More →

@@ -78,7 +78,7 @@ const Hero = () => {
                                                 {service.description}
                                             </p>
                                             <div className="btn-style">
-                                                <Link onClick={ClickHandler} href="/contact" 
+                                                <Link onClick={ClickHandler} href="/solutions" 
                                                     className="bg-[#c0b596] relative cursor-pointer text-[16px]
                                                     font-semibold text-white px-[38px] py-[12px] capitalize inline-block mt-[6px] 
                                                     transition ease-in-out duration-300 hover:bg-[#d4c291]
