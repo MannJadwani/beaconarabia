@@ -20,7 +20,7 @@ const Footer = (props) => {
                         <div className="lg:pr-8 md:mb-[40px] relative text-left">
                             <div className="mb-7">
                                 <Link className="inline-block" href="/">
-                                    <Image className="w-20 h-auto object-contain rounded-full bg-white/10 p-0.5" src={Logo} alt="Logo" />
+                                    <Image className="w-full h-auto object-contain  bg-white/10 p-0.5" src={Logo} alt="Logo" />
                                 </Link>
                             </div>
                             <p className="text-gray-300 text-[16px] mb-[20px] leading-relaxed">

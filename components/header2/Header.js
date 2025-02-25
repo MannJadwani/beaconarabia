@@ -30,7 +30,7 @@ const Header = (props) => {
                         <div className="w-[140px] lg:w-[100px] lg:mx-auto">
                             <Link onClick={ClickHandler} href="/" className="block">
                                 <Image 
-                                    className="w-full h-auto object-contain rounded-full bg-white/20 p-2 hover:bg-white/30 transition-all duration-300 shadow-lg" 
+                                    className="w-full h-auto object-contain  bg-white/20 p-2 hover:bg-white/30 transition-all duration-300 shadow-lg" 
                                     src={Logo} 
                                     alt="Beacon Arabia Consulting"
                                     width={140}

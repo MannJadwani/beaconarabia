@@ -31,14 +31,13 @@ const Header = (props) => {
                         {/* Desktop Navigation with Logo */}
                         <div className="flex items-center space-x-8 lg:hidden">
                             {/* Logo - Only visible on desktop */}
-                            <div className="w-[50px]">
+                            <div className="w-[200px]">
                                 <Link onClick={ClickHandler} href="/" className="block">
                                     <Image 
-                                        className="w-full h-auto rounded-full p-0.5 bg-white/10" 
+                                        className="w-full h-auto  bg-white/10" 
                                         src={Logo} 
                                         alt="Logo"
-                                        width={50}
-                                        height={50}
+                                       
                                     />
                                 </Link>
                             </div>
@@ -106,10 +105,10 @@ const Header = (props) => {
                             </Link>
 
                             {/* Logo - Only visible on mobile */}
-                            <div className="hidden lg:block w-[50px]">
+                            <div className="hidden lg:block w-[100px]">
                                 <Link onClick={ClickHandler} href="/" className="block">
                                     <Image 
-                                        className="w-full h-auto rounded-full p-0.5 bg-white/10" 
+                                        className="w-full h-auto p-0.5 bg-white/10" 
                                         src={Logo} 
                                         alt="Logo"
                                         width={50}
