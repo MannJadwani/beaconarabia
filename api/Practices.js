@@ -7,64 +7,41 @@ import simg6 from '/public/images/practice/img-6.jpg'
 
 const Practices = [
     {
-        Id: '1',
-        sImg:simg,
-        sTitle: 'Family Law',
-        slug: 'Family-Law',
-        description:'It is a long established fact that a reader will be distracted by the readable content of',
-        des2:'There are many variations of passages of Lorem',
-        des3:'One way to categorize the activities is in terms of the professional’s area of expertise such as competitive analysis, corporate strategy the activities',
-        icon:'flaticon-parents',
+        slug: "business-setup",
+        sTitle: "Business Setup Services",
+        description: "Navigate the complexities of establishing your business in Dubai with our expert guidance. We simplify the entire process to ensure a smooth transition into the UAE market.",
+        icon: "fa fa-building"
     },
     {
-        Id: '2',
-        sImg:simg2,
-        sTitle: 'Personal Injury',
-        slug: 'Personal-Injury',
-        description:'It is a long established fact that a reader will be distracted by the readable content of',
-        des2:'There are many variations of passages of Lorem',
-        des3:'One way to categorize the activities is in terms of the professional’s area of expertise such as competitive analysis, corporate strategy the activities',
-        icon:'flaticon-wounded',
+        slug: "pro-services",
+        sTitle: "PRO Services",
+        description: "Comprehensive assistance with government documentation, legal paperwork, and professional document processing to keep your business compliant with UAE regulations.",
+        icon: "fa fa-file-text"
     },
     {
-        Id: '3',
-        sImg:simg3,
-        sTitle: 'Business Law',
-        slug: 'Business-Law',
-        description:'It is a long established fact that a reader will be distracted by the readable content of',
-        des2:'There are many variations of passages of Lorem',
-        des3:'One way to categorize the activities is in terms of the professional’s area of expertise such as competitive analysis, corporate strategy the activities',
-        icon:'flaticon-employee',
+        slug: "bank-account",
+        sTitle: "Bank Account Assistance",
+        description: "Experience seamless banking solutions in the UAE's prestigious financial sector. We help you access the region's renowned banking services with complete confidentiality.",
+        icon: "fa fa-bank"
     },
     {
-        Id: '4',
-        sImg:simg4,
-        sTitle: 'Criminal Law',
-        slug: 'Criminal-Law',
-        description:'It is a long established fact that a reader will be distracted by the readable content of',
-        des2:'There are many variations of passages of Lorem',
-        des3:'One way to categorize the activities is in terms of the professional’s area of expertise such as competitive analysis, corporate strategy the activities',
-        icon:'flaticon-thief',
+        slug: "business-loan",
+        sTitle: "Business Financing",
+        description: "Access flexible financing options tailored for established businesses. Our solutions cater to various business needs with competitive terms and efficient processing.",
+        icon: "fa fa-money"
     },
     {
-        Id: '5',
-        sImg:simg5,
-        sTitle: 'Education Law',
-        slug: 'Education-Law',
-        description:'It is a long established fact that a reader will be distracted by the readable content of',
-        des2:'There are many variations of passages of Lorem',
-        des3:'One way to categorize the activities is in terms of the professional’s area of expertise such as competitive analysis, corporate strategy the activities',
-        icon:'flaticon-university-graduate-hat',
+        slug: "private-funding",
+        sTitle: "Investment Solutions",
+        description: "Connect with our network of private investors and funding opportunities. We facilitate sustainable financing options with transparent terms and structured repayment plans.",
+        icon: "fa fa-line-chart"
     },
     {
-        Id: '6',
-        sImg:simg6,
-        sTitle: 'Real Estate Law',
-        slug: 'Real-Estate-Law',
-        description:'It is a long established fact that a reader will be distracted by the readable content of',
-        des2:'There are many variations of passages of Lorem',
-        des3:'One way to categorize the activities is in terms of the professional’s area of expertise such as competitive analysis, corporate strategy the activities',
-        icon:'flaticon-house',
-    },
+        slug: "tax-assistance",
+        sTitle: "Tax & VAT Services",
+        description: "Stay compliant with UAE's tax regulations through our comprehensive VAT and tax advisory services. We ensure your business meets all regulatory requirements efficiently.",
+        icon: "fa fa-calculator"
+    }
 ]
+
 export default Practices;

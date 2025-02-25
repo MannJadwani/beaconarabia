@@ -17,7 +17,7 @@ function MyApp({ Component, pageProps }) {
   return (
     <div>
       <Head>
-        <title>Barristar – Tailwind Css Lawyer and Attorney Next Js Template</title>
+        <title>Beacon Arabia Consulting | Business Setup Services in Dubai</title>
       </Head>
       <Component {...pageProps} />
       <ToastContainer />

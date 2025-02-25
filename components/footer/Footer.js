@@ -1,7 +1,6 @@
 import React from 'react'
 import Link from "next/link";
 import Logo from '/public/images/logo.png'
-import Practices from '../../api/Practices';
 import Image from 'next/image';
 
 const SubmitHandler = (e) => {
@@ -17,65 +16,72 @@ const Footer = (props) => {
         <footer className="relative bg-[#151a30] z-10">
             <div className="pt-[100px] pb-[90px] md:py-[90px] md:pb-[20px] overflow-hidden relative -z-10">
                 <div className="wraper">
-                    <div className="grid grid-cols-4 md:grid-cols-2 sm:grid-cols-1 gap-3">
-                        <div className="w-[420px] xl:w-[355px] lg:w-[297px] pr-[125px] md:mb-[40px] lg:pr-0 relative text-left">
+                    <div className="grid grid-cols-4 md:grid-cols-2 sm:grid-cols-1 gap-8">
+                        <div className="lg:pr-8 md:mb-[40px] relative text-left">
                             <div className="mb-7">
-                                <Link className="text-[45px] font-bold flex items-center text-white" href="/">
-                                    <Image className="w-20 h-auto object-contain rounded-full" src={Logo} alt="Logo" /></Link>
+                                <Link className="inline-block" href="/">
+                                    <Image className="w-20 h-auto object-contain rounded-full bg-white/10 p-0.5" src={Logo} alt="Logo" />
+                                </Link>
                             </div>
-                            <p className="text-white text-[16px] mb-[10px]">
-                                Contrary to popular belief, Lorem Ipsum is not simply random text.
-                                It has roots in a piece of classNameical Latin literature
+                            <p className="text-gray-300 text-[16px] mb-[20px] leading-relaxed">
+                                Your trusted partner in business setup and consulting services in Dubai. With over 30 years of experience, we help businesses thrive in the UAE market.
                             </p>
-                            <ul className="overflow-hidden pt-[15px]">
-                                <li className="text-white float-left group "><Link className="text-white transition-all group-hover:text-[#FFE600]" onClick={SubmitHandler} href="/"><i className="ti-facebook"></i></Link></li>
-                                <li className="text-white float-left group ml-[15px]"><Link className="text-white transition-all group-hover:text-[#c0b596]" onClick={SubmitHandler} href="/"><i className="ti-twitter-alt"></i></Link></li>
-                                <li className="text-white float-left group ml-[15px]"><Link className="text-white transition-all group-hover:text-[#c0b596]" onClick={SubmitHandler} href="/"><i className="ti-linkedin"></i></Link></li>
-                                <li className="text-white float-left group ml-[15px]"><Link className="text-white transition-all group-hover:text-[#c0b596]" onClick={SubmitHandler} href="/"><i className="ti-pinterest"></i></Link></li>
-                                <li className="text-white float-left group ml-[15px]"><Link className="text-white transition-all group-hover:text-[#c0b596]" onClick={SubmitHandler} href="/"><i className="ti-vimeo-alt"></i></Link></li>
+                        </div>
+                        <div className="lg:px-4 md:mb-[40px] relative text-left">
+                            <div className="mb-7">
+                                <h3 className="text-[24px] font-medium text-white capitalize relative pb-[15px] before:absolute before:content-[''] before:left-0 before:bottom-0 before:w-[30px] before:h-[2px] before:bg-[#c0b596]">Quick Links</h3>
+                            </div>
+                            <ul className="space-y-3">
+                                <li><Link className="text-gray-300 hover:text-[#c0b596] transition-all inline-block" href="/home">Home</Link></li>
+                                <li><Link className="text-gray-300 hover:text-[#c0b596] transition-all inline-block" href="/about">Who We Are</Link></li>
+                                <li><Link className="text-gray-300 hover:text-[#c0b596] transition-all inline-block" href="/practice">Company Formation</Link></li>
+                                <li><Link className="text-gray-300 hover:text-[#c0b596] transition-all inline-block" href="/solutions">Our Solutions</Link></li>
+                                <li><Link className="text-gray-300 hover:text-[#c0b596] transition-all inline-block" href="/contact">Reach Us</Link></li>
                             </ul>
                         </div>
-                        <div className="w-[200px] md:w-full ml-auto md:mb-[40px] lg:pr-0 relative text-left ">
+                        <div className="lg:px-4 md:mb-[40px] relative text-left">
                             <div className="mb-7">
-                                <h3 className="text-[28px] font-medium  font-heading-font text-white capitalize">Quick Link</h3>
+                                <h3 className="text-[24px] font-medium text-white capitalize relative pb-[15px] before:absolute before:content-[''] before:left-0 before:bottom-0 before:w-[30px] before:h-[2px] before:bg-[#c0b596]">Our Services</h3>
                             </div>
-                            <ul>
-                                <li className="relative mb-[8px] block"><Link className=" text-white hover:text-[#c0b596] transition-all" href="/home">Home</Link></li>
-                                <li className="relative mb-[8px] block"><Link className=" text-white hover:text-[#c0b596] transition-all" href="/about">Who We Are</Link></li>
-                                <li className="relative mb-[8px] block"><Link className=" text-white hover:text-[#c0b596] transition-all" href="/practice">Company Formation</Link></li>
-                                <li className="relative mb-[8px] block"><Link className=" text-white hover:text-[#c0b596] transition-all" href="/">Our Solutions</Link></li>
-                                <li className="relative mb-[8px] block"><Link className=" text-white hover:text-[#c0b596] transition-all" href="/contact">Reach Us</Link></li>
+                            <ul className="space-y-3">
+                                <li><Link className="text-gray-300 hover:text-[#c0b596] transition-all inline-block" href="/#services" onClick={ClickHandler}>Business Setup Services</Link></li>
+                                <li><Link className="text-gray-300 hover:text-[#c0b596] transition-all inline-block" href="/#services" onClick={ClickHandler}>PRO Services</Link></li>
+                                <li><Link className="text-gray-300 hover:text-[#c0b596] transition-all inline-block" href="/#services" onClick={ClickHandler}>Bank Account Assistance</Link></li>
+                                <li><Link className="text-gray-300 hover:text-[#c0b596] transition-all inline-block" href="/#services" onClick={ClickHandler}>Business Financing</Link></li>
+                                <li><Link className="text-gray-300 hover:text-[#c0b596] transition-all inline-block" href="/#services" onClick={ClickHandler}>Tax & VAT Services</Link></li>
                             </ul>
                         </div>
-                        <div className="pl-[15px] md:pl-[0px] md:mb-[40px] lg:pr-0 relative text-left ">
+                        <div className="lg:pl-4 md:mb-[40px] relative text-left">
                             <div className="mb-7">
-                                <h3 className="text-[28px] font-medium  font-heading-font text-white capitalize">Practice Area</h3>
+                                <h3 className="text-[24px] font-medium text-white capitalize relative pb-[15px] before:absolute before:content-[''] before:left-0 before:bottom-0 before:w-[30px] before:h-[2px] before:bg-[#c0b596]">Contact Info</h3>
                             </div>
-                            <ul>
-                                {Practices.map((practice, Pitem) => (
-                                    <li className="relative mb-[8px] block" key={Pitem}><Link className="text-white hover:text-[#c0b596] transition-all" onClick={ClickHandler} href="/practice-single/[slug]" as={`/practice-single/${practice.slug}`}>{practice.sTitle}</Link></li>
-                                ))}
-                            </ul>
-                        </div>
-                        <div className=" md:mb-[40px] lg:pr-0 relative text-left ">
-                            <div className="mb-7">
-                                <h3 className="text-[28px] font-medium  font-heading-font text-white capitalize">Contact Us</h3>
-                            </div>
-                            <ul>
-                                <li className="relative mb-[8px] block text-white">Head Office Address</li>
-                                <li className="relative mb-[8px] block text-white">Building A1, Dubai Digital Park,</li>
-                                <li className="relative mb-[8px] block text-white">Dubai Silicon Oasis, Dubai, UAE</li>
-                                <li className="relative mb-[8px] block text-white">Phone: 888 123-4587</li>
-                                <li className="relative mb-[8px] block text-white">Email: info@example.com</li>
+                            <ul className="space-y-4">
+                                <li className="flex items-start space-x-3">
+                                    <i className="fa fa-map-marker text-[#c0b596] mt-1"></i>
+                                    <div className="text-gray-300">
+                                        <p className="font-medium text-white mb-1">Head Office</p>
+                                        <p>Building A1, Dubai Digital Park,</p>
+                                        <p>Dubai Silicon Oasis, Dubai, UAE</p>
+                                    </div>
+                                </li>
+                                <li className="flex items-center space-x-3">
+                                    <i className="fa fa-phone text-[#c0b596]"></i>
+                                    <span className="text-gray-300">888 123-4587</span>
+                                </li>
+                                <li className="flex items-center space-x-3">
+                                    <i className="fa fa-envelope text-[#c0b596]"></i>
+                                    <span className="text-gray-300">info@example.com</span>
+                                </li>
                             </ul>
                         </div>
                     </div>
                 </div>
             </div>
             <div className="wraper">
-                <div className=" border-t-1 border-[rgba(192,181,150,.3)] relative">
-                    <div className="h-[1px] absolute left-[15px] top-0 bg-[#ffffff0d] w-[calc(100%+30px)]"></div>
-                    <p className="text-center text-white text-[14px] py-[20px]"> Privacy Policy | &copy; 2023 Barristar. All rights reserved</p>
+                <div className="border-t border-[#ffffff1a] relative">
+                    <p className="text-center text-gray-400 text-[14px] py-[20px]">
+                        © {new Date().getFullYear()} Beacon Arabia Consulting. All rights reserved | Privacy Policy
+                    </p>
                 </div>
             </div>
         </footer>

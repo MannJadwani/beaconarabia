@@ -73,7 +73,7 @@ const Header = (props) => {
                                     <Link onClick={() => {
                                         ClickHandler();
                                         setMobileMenuOpen(false);
-                                    }} href="/" 
+                                    }} href="/solutions" 
                                         className="text-white hover:text-[#c0b596] transition-all text-sm uppercase lg:text-base lg:block lg:py-2">
                                         Our Solutions
                                     </Link>

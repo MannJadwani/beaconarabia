@@ -28,41 +28,57 @@ const Header = (props) => {
                             <span className="block w-6 h-0.5 bg-white transform transition-all duration-300"></span>
                         </button>
 
-                        {/* Desktop Navigation */}
-                        <ul className="flex items-center space-x-6 lg:hidden">
-                            <li>
-                                <Link onClick={ClickHandler} href="/" 
-                                    className="text-white hover:text-[#c0b596] transition-all text-sm uppercase">
-                                    Home
+                        {/* Desktop Navigation with Logo */}
+                        <div className="flex items-center space-x-8 lg:hidden">
+                            {/* Logo - Only visible on desktop */}
+                            <div className="w-[50px]">
+                                <Link onClick={ClickHandler} href="/" className="block">
+                                    <Image 
+                                        className="w-full h-auto rounded-full p-0.5 bg-white/10" 
+                                        src={Logo} 
+                                        alt="Logo"
+                                        width={50}
+                                        height={50}
+                                    />
                                 </Link>
-                            </li>
-                            <li>
-                                <Link onClick={ClickHandler} href="/about" 
-                                    className="text-white hover:text-[#c0b596] transition-all text-sm uppercase">
-                                    Who We Are
-                                </Link>
-                            </li>
-                            <li>
-                                <Link onClick={ClickHandler} href="/practice" 
-                                    className="text-white hover:text-[#c0b596] transition-all text-sm uppercase">
-                                    Company Formation
-                                </Link>
-                            </li>
-                            <li>
-                                <Link onClick={ClickHandler} href="/" 
-                                    className="text-white hover:text-[#c0b596] transition-all text-sm uppercase">
-                                    Our Solutions
-                                </Link>
-                            </li>
-                            <li>
-                                <Link onClick={ClickHandler} href="/contact" 
-                                    className="text-white hover:text-[#c0b596] transition-all text-sm uppercase">
-                                    Reach Us
-                                </Link>
-                            </li>
-                        </ul>
+                            </div>
 
-                        {/* Logo and Search Container */}
+                            {/* Desktop Navigation */}
+                            <ul className="flex items-center space-x-6">
+                                <li>
+                                    <Link onClick={ClickHandler} href="/" 
+                                        className="text-white hover:text-[#c0b596] transition-all text-sm uppercase">
+                                        Home
+                                    </Link>
+                                </li>
+                                <li>
+                                    <Link onClick={ClickHandler} href="/about" 
+                                        className="text-white hover:text-[#c0b596] transition-all text-sm uppercase">
+                                        Who We Are
+                                    </Link>
+                                </li>
+                                <li>
+                                    <Link onClick={ClickHandler} href="/practice" 
+                                        className="text-white hover:text-[#c0b596] transition-all text-sm uppercase">
+                                        Company Formation
+                                    </Link>
+                                </li>
+                                <li>
+                                    <Link onClick={ClickHandler} href="/solutions" 
+                                        className="text-white hover:text-[#c0b596] transition-all text-sm uppercase">
+                                        Our Solutions
+                                    </Link>
+                                </li>
+                                <li>
+                                    <Link onClick={ClickHandler} href="/contact" 
+                                        className="text-white hover:text-[#c0b596] transition-all text-sm uppercase">
+                                        Reach Us
+                                    </Link>
+                                </li>
+                            </ul>
+                        </div>
+
+                        {/* Search, Get in Touch, and Mobile Logo Container */}
                         <div className="flex items-center space-x-4">
                             {/* Search Icon */}
                             <div className="relative pl-6 border-l border-[rgba(255,255,255,.07)] lg:hidden">
@@ -89,8 +105,8 @@ const Header = (props) => {
                                 Get in Touch
                             </Link>
 
-                            {/* Logo */}
-                            <div className="w-[50px]">
+                            {/* Logo - Only visible on mobile */}
+                            <div className="hidden lg:block w-[50px]">
                                 <Link onClick={ClickHandler} href="/" className="block">
                                     <Image 
                                         className="w-full h-auto rounded-full p-0.5 bg-white/10" 
@@ -145,7 +161,7 @@ const Header = (props) => {
                             { title: 'Home', link: '/' },
                             { title: 'Who We Are', link: '/about' },
                             { title: 'Company Formation', link: '/practice' },
-                            { title: 'Our Solutions', link: '/' },
+                            { title: 'Our Solutions', link: '/solutions' },
                             { title: 'Reach Us', link: '/contact' }
                         ].map((item, index) => (
                             <li key={index}>
