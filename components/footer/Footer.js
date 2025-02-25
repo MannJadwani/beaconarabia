@@ -70,7 +70,7 @@ const Footer = (props) => {
                                 </li>
                                 <li className="flex items-center space-x-3">
                                     <i className="fa fa-envelope text-[#c0b596]"></i>
-                                    <span className="text-gray-300">info@example.com</span>
+                                    <span className="text-gray-300">contact@beaconarabiaconsulting.com</span>
                                 </li>
                             </ul>
                         </div>

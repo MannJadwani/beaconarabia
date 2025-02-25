@@ -1,7 +1,7 @@
 import React from "react";
 import Link from "next/link";
 import Image from "next/image";
-import businessImg from '/public/images/testimonial/1.png';
+import businessImg from '/public/images/business/pexels-camcasey-1157255.jpg';
 
 const Testimonial = (props) => {
     const businessOptions = [

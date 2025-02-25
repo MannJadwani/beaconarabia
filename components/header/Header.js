@@ -81,7 +81,7 @@ const Header = (props) => {
                         {/* Search, Get in Touch, and Mobile Logo Container */}
                         <div className="flex items-center space-x-4">
                             {/* Search Icon */}
-                            <div className="relative pl-6 border-l border-[rgba(255,255,255,.07)] lg:hidden">
+                            {/* <div className="relative pl-6 border-l border-[rgba(255,255,255,.07)] lg:hidden">
                                 <div className="text-white cursor-pointer" onClick={() => setSearchActive(!searchActive)}>
                                     <i className={`fi ti-search ${searchActive ? "ti-close" : "fi"}`}></i>
                                 </div>
@@ -97,7 +97,7 @@ const Header = (props) => {
                                         </button>
                                     </form>
                                 </div>
-                            </div>
+                            </div> */}
 
                             {/* Get in Touch Button */}
                             <Link onClick={ClickHandler} href="/contact" 

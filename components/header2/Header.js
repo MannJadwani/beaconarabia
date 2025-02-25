@@ -27,14 +27,16 @@ const Header = (props) => {
                         </button>
 
                         {/* Logo - Left on PC, Center on Mobile */}
-                        <div className="w-[120px] lg:w-[80px] lg:mx-auto">
+                        <div className="w-[140px] lg:w-[100px] lg:mx-auto">
                             <Link onClick={ClickHandler} href="/" className="block">
                                 <Image 
-                                    className="w-full h-auto rounded-full p-0.5 bg-white/10" 
+                                    className="w-full h-auto object-contain rounded-full bg-white/20 p-2 hover:bg-white/30 transition-all duration-300 shadow-lg" 
                                     src={Logo} 
-                                    alt="Logo"
-                                    width={120}
-                                    height={120}
+                                    alt="Beacon Arabia Consulting"
+                                    width={140}
+                                    height={140}
+                                    priority
+                                    quality={100}
                                 />
                             </Link>
                         </div>

@@ -31,7 +31,7 @@ const Contactpage = () => {
                                             </div>
                                         </div>
                                         <h2 className="text-[25px] text-[#282e3f] font-medium my-[20px]">Email Us</h2>
-                                        <p className="text-[#666] text-[16px] leading-[22px]">info@example.com</p>
+                                        <p className="text-[#666] text-[16px] leading-[22px]">contact@beaconarabiaconsulting.com</p>
                                         <p className="text-[#666] text-[16px] leading-[22px] mt-2">Business Hours:</p>
                                         <p className="text-[#666] text-[16px] leading-[22px]">Mon - Fri: 9:00 AM - 6:00 PM</p>
                                     </div>

@@ -1,6 +1,6 @@
 import React, { useState } from 'react'
 import Link from "next/link";
-import MobileMenu from '../MobileMenu/MobileMenu'
+
 import Logo from '/public/images/logo.png'
 import Image from 'next/image';
 
@@ -44,7 +44,7 @@ const Header3 = (props) => {
             <div className="relative">
                 <div className="wraper bg-[#272c3f] px-[10px]">
                     <div className="flex items-center justify-between ">
-                        <MobileMenu />
+
                         <div className="logo w-[255px] md:w-[200px] md:mx-auto sm:w-[180px] col:w-[160px]">
                             <Link className="text-[45px] col:text-[25px] font-bold flex items-center text-white" href="/">
                                 <Image className="w-full h-auto object-contain" src={Logo} alt="Logo" /></Link>

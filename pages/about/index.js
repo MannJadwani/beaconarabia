@@ -82,10 +82,10 @@ const AboutPage = () => {
                                         <h2 className="text-3xl font-bold text-[#272c3f] mb-2">Pratapsingh Nathani</h2>
                                         <h3 className="text-xl text-[#c0b596] font-medium mb-6">Founder & CEO</h3>
                                         <div className="flex space-x-4 mt-4">
-                                            <a href="#" className="w-10 h-10 rounded-full bg-[#c0b596] flex items-center justify-center text-white hover:bg-[#272c3f] transition-all">
+                                            <a href="https://www.linkedin.com/in/pratapnathani/" target="_blank" rel="noopener noreferrer" className="w-10 h-10 rounded-full bg-[#c0b596] flex items-center justify-center text-white hover:bg-[#272c3f] transition-all">
                                                 <i className="fa fa-linkedin"></i>
                                             </a>
-                                            <a href="#" className="w-10 h-10 rounded-full bg-[#c0b596] flex items-center justify-center text-white hover:bg-[#272c3f] transition-all">
+                                            <a href="https://x.com/pratapnathani?lang=ar" target="_blank" rel="noopener noreferrer" className="w-10 h-10 rounded-full bg-[#c0b596] flex items-center justify-center text-white hover:bg-[#272c3f] transition-all">
                                                 <i className="fa fa-twitter"></i>
                                             </a>
                                         </div>
