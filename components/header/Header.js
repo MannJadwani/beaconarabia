@@ -1,188 +1,183 @@
 import React, { useState } from 'react'
 import Link from "next/link";
-import MobileMenu from '../MobileMenu/MobileMenu'
 import Logo from '/public/images/logo.png'
 import Image from 'next/image';
 
-
 const Header = (props) => {
-
     const [menuActive, setMenuState] = useState(false);
+    const [searchActive, setSearchActive] = useState(false);
 
     const ClickHandler = () => {
         window.scrollTo(10, 0);
     }
 
-    const SubmitHandler = (e) => {
-        e.preventDefault()
-    }
-
-
     return (
-        <header className=" relative z-[111]">
-            <div className="bg-[#272c3f] pt-[5px]">
-                <div className="wraper relative before:absolute before:w-full before:h-[1px] before:bg-[rgba(255,255,255,.07)] before:bottom-0 before:left-0 before:content-['']">
-                    <div className="grid grid-cols-12">
-                        <div className="col-span-10 md:col-span-12">
-                            <ul className="text-left md:text-center">
-                                <li className=" text-white inline-block p-[15px]  col:pr-0 pl-0 col:pb-[0]"><i className="fa fa-map-marker pr-[10px] col:pt-[0] text-[#cbbc99] text-[20px]" aria-hidden="true"></i>121 King Street, Melbourne , Australia</li>
-                                <li className="relative text-white inline-block p-[15px]  col:pr-0
-                                before:absolute before:content-[''] before:left-0 before:top-[15px] before:w-[1px] before:h-[25px] before:bg-[rgba(255,255,255,.07)]  before:z-10 before:transform before:-translate-x-1/2 md:before:hidden">
-                                    <i className="fa fa-mobile pr-[10px] text-[#cbbc99] text-[20px]" aria-hidden="true"></i>3164-5456854</li>
-                                <li className="relative text-white inline-block p-[15px] col:pr-0  before:absolute before:content-[''] before:left-0 before:top-[15px] before:w-[1px] before:h-[25px] before:bg-[rgba(255,255,255,.07)] md:before:hidden  before:z-10 before:transform before:-translate-x-1/2 "><i className="fa fa-clock-o pr-[10px] text-[#cbbc99] text-[20px]" aria-hidden="true"></i>9AM - PM</li>
-                            </ul>
-                        </div>
-                        <div className="col-span-2 md:col-span-12">
-                            <div className="text-right md:text-center md:mb-[15px]">
-                                <Link onClick={ClickHandler} href="/contact" className="theme-btn md:text-[14px] md:py-[8px] md:px-[22px]">Get in Touch</Link>
+        <header className="relative z-[111]">
+            <div className="bg-[#272c3f]">
+                <div className="wraper">
+                    {/* Main Navigation */}
+                    <div className="flex items-center justify-between py-4">
+                        {/* Mobile Menu Button */}
+                        <button 
+                            onClick={() => setMenuState(true)}
+                            className="hidden lg:flex flex-col justify-center items-center w-8 h-8 space-y-1.5 focus:outline-none"
+                            aria-label="Open Menu"
+                        >
+                            <span className="block w-6 h-0.5 bg-white transform transition-all duration-300"></span>
+                            <span className="block w-6 h-0.5 bg-white transform transition-all duration-300"></span>
+                            <span className="block w-6 h-0.5 bg-white transform transition-all duration-300"></span>
+                        </button>
+
+                        {/* Desktop Navigation */}
+                        <ul className="flex items-center space-x-6 lg:hidden">
+                            <li>
+                                <Link onClick={ClickHandler} href="/" 
+                                    className="text-white hover:text-[#c0b596] transition-all text-sm uppercase">
+                                    Home
+                                </Link>
+                            </li>
+                            <li>
+                                <Link onClick={ClickHandler} href="/about" 
+                                    className="text-white hover:text-[#c0b596] transition-all text-sm uppercase">
+                                    Who We Are
+                                </Link>
+                            </li>
+                            <li>
+                                <Link onClick={ClickHandler} href="/practice" 
+                                    className="text-white hover:text-[#c0b596] transition-all text-sm uppercase">
+                                    Company Formation
+                                </Link>
+                            </li>
+                            <li>
+                                <Link onClick={ClickHandler} href="/" 
+                                    className="text-white hover:text-[#c0b596] transition-all text-sm uppercase">
+                                    Our Solutions
+                                </Link>
+                            </li>
+                            <li>
+                                <Link onClick={ClickHandler} href="/contact" 
+                                    className="text-white hover:text-[#c0b596] transition-all text-sm uppercase">
+                                    Reach Us
+                                </Link>
+                            </li>
+                        </ul>
+
+                        {/* Logo and Search Container */}
+                        <div className="flex items-center space-x-4">
+                            {/* Search Icon */}
+                            <div className="relative pl-6 border-l border-[rgba(255,255,255,.07)] lg:hidden">
+                                <div className="text-white cursor-pointer" onClick={() => setSearchActive(!searchActive)}>
+                                    <i className={`fi ti-search ${searchActive ? "ti-close" : "fi"}`}></i>
+                                </div>
+                                <div className={`absolute right-0 top-full mt-4 transition-all ${searchActive ? "opacity-100 visible" : "opacity-0 invisible"}`}>
+                                    <form onSubmit={(e) => e.preventDefault()} className="flex">
+                                        <input 
+                                            type="text" 
+                                            placeholder="Search..." 
+                                            className="w-[240px] px-4 py-2 text-sm border-0 focus:outline-none"
+                                        />
+                                        <button className="bg-[#272c3f] text-white px-4">
+                                            <i className="fa fa-search"></i>
+                                        </button>
+                                    </form>
+                                </div>
+                            </div>
+
+                            {/* Get in Touch Button */}
+                            <Link onClick={ClickHandler} href="/contact" 
+                                className="bg-[#c0b596] text-white px-4 py-1.5 text-sm font-semibold hover:bg-[#d4c291] transition-all rounded-full">
+                                Get in Touch
+                            </Link>
+
+                            {/* Logo */}
+                            <div className="w-[50px]">
+                                <Link onClick={ClickHandler} href="/" className="block">
+                                    <Image 
+                                        className="w-full h-auto rounded-full p-0.5 bg-white/10" 
+                                        src={Logo} 
+                                        alt="Logo"
+                                        width={50}
+                                        height={50}
+                                    />
+                                </Link>
                             </div>
                         </div>
                     </div>
                 </div>
             </div>
-            <div className="wpo-site-header bg-[#272c3f] relative ">
-                <div className="wraper">
-                    <div className="flex items-center justify-between ">
-                        <MobileMenu />
 
-                        <div className="logo w-[255px] md:w-[200px] md:mx-auto sm:w-[180px] col:w-[160px]">
-                            <Link onClick={ClickHandler} className="text-[45px] col:text-[25px] font-bold flex items-center text-white" href="/">
-                                <Image className="w-20 h-auto object-contain" src={Logo} alt="Logo" /></Link>
+            {/* Mobile Menu Overlay */}
+            <div 
+                className={`fixed inset-0 bg-black/50 backdrop-blur-sm transition-opacity duration-300 z-50 
+                ${menuActive ? "opacity-100 visible" : "opacity-0 invisible"}`}
+                onClick={() => setMenuState(false)}
+            />
+
+            {/* Mobile Menu Panel */}
+            <div className={`fixed top-0 left-0 w-[300px] h-full bg-[#272c3f] transform transition-transform duration-300 ease-out z-[60] 
+                ${menuActive ? "translate-x-0" : "-translate-x-full"}`}>
+                
+                {/* Header */}
+                <div className="flex items-center justify-between p-5 border-b border-gray-700">
+                    <Link href="/" className="block" onClick={() => setMenuState(false)}>
+                        <Image 
+                            src={Logo} 
+                            alt="Logo" 
+                            width={40} 
+                            height={40} 
+                            className="w-[40px] h-[40px] rounded-full p-0.5 bg-white/10 object-contain" 
+                        />
+                    </Link>
+                    <button 
+                        onClick={() => setMenuState(false)}
+                        className="w-8 h-8 flex items-center justify-center text-white hover:text-[#c0b596] transition-colors"
+                    >
+                        <svg className="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M6 18L18 6M6 6l12 12" />
+                        </svg>
+                    </button>
+                </div>
+
+                {/* Navigation Links */}
+                <nav className="px-5 py-6">
+                    <ul className="space-y-4">
+                        {[
+                            { title: 'Home', link: '/' },
+                            { title: 'Who We Are', link: '/about' },
+                            { title: 'Company Formation', link: '/practice' },
+                            { title: 'Our Solutions', link: '/' },
+                            { title: 'Reach Us', link: '/contact' }
+                        ].map((item, index) => (
+                            <li key={index}>
+                                <Link 
+                                    href={item.link}
+                                    className="block text-white hover:text-[#c0b596] transition-colors py-2 text-base font-medium"
+                                    onClick={() => {
+                                        ClickHandler();
+                                        setMenuState(false);
+                                    }}
+                                >
+                                    {item.title}
+                                </Link>
+                            </li>
+                        ))}
+                    </ul>
+                </nav>
+
+                {/* Contact Info */}
+                <div className="px-5 py-6 border-t border-gray-700">
+                    <div className="space-y-4">
+                        <div className="flex items-center text-white">
+                            <i className="fa fa-map-marker text-[#cbbc99] text-xl w-8"></i>
+                            <span className="text-sm">Building A1, Dubai Digital Park, Dubai Silicon Oasis, Dubai, UAE</span>
                         </div>
-                        <ul className="md:hidden mr-[-50px] lg-[-10px]">
-                            <li className="relative inline-block group">
-                                <Link onClick={ClickHandler} href="/" className="relative text-[15px] lg:text-[14px] py-[35px] xl:py-[30px] px-[18px] xl:px-[6px] text-white hover:text-[#c0b596] block uppercase font-base-font font-normal hover:text-[#c0b596] transition-all
-                                ">Home</Link>
-                                <ul className="absolute w-[240px]  left-0 top-[110%] p-[20px] z-[111]  bg-[#fff] shadow-[#3e419f17]  transition-all  opacity-0 invisible
-                                  group-hover:opacity-100  group-hover:top-full group-hover:visible">
-                                    <li>
-                                        <Link onClick={ClickHandler} href="/" className="text-[15px] lg:text-[14px] inline-block py-[5px] uppercase hover:text-[#c0b596] group relative overflow-hidden font-normal transition-all 
-                                        ">Home style one</Link>
-                                    </li>
-                                    <li>
-                                        <Link onClick={ClickHandler} href="/home-2" className="text-[15px] lg:text-[14px] inline-block py-[5px] uppercase text-[#333] group relative overflow-hidden font-normal transition-all hover:text-[#c0b596] 
-                                        ">Home style Two</Link>
-                                    </li>
-                                    <li>
-                                        <Link onClick={ClickHandler} href="/home-3" className="text-[15px] lg:text-[14px] inline-block py-[5px] uppercase text-[#333] group relative overflow-hidden font-normal transition-all hover:text-[#c0b596] 
-                                        ">Home style three</Link>
-                                    </li>
-                                </ul>
-                            </li>
-                            <li className="relative inline-block">
-                                <Link onClick={ClickHandler} href="/about" className="relative group text-[15px] lg:text-[14px] py-[35px] xl:py-[30px] px-[18px] xl:px-[6px] text-white block uppercase font-base-font font-normal hover:text-[#c0b596] transition-all
-                               ">Who We Are</Link>
-                            </li>
-                            <li className="relative inline-block group">
-                                <Link onClick={ClickHandler} href="/" className="relative group text-[15px] lg:text-[14px] py-[35px] xl:py-[30px] px-[18px] xl:px-[6px] text-white block uppercase font-base-font font-normal hover:text-[#c0b596] transition-all
-                              ">Our Solutions</Link>
-                                <ul className="absolute w-[240px]  left-0 top-[110%] p-[20px] z-[111]  bg-[#fff] shadow-[#3e419f17]  transition-all  opacity-0 invisible group-hover:opacity-100  group-hover:top-full group-hover:visible">
-                                    <li>
-                                        <Link onClick={ClickHandler} href="/practice" className="text-[15px] lg:text-[14px] inline-block py-[5px] uppercase text-[#333] group relative overflow-hidden font-normal transition-all hover:text-[#c0b596] 
-                                        ">Practice areas</Link>
-                                    </li>
-
-                                    <li>
-                                        <Link onClick={ClickHandler} href="/practice-single/Family-Law" className="text-[15px] lg:text-[14px] inline-block py-[5px] uppercase text-[#333] group relative overflow-hidden font-normal transition-all hover:text-[#c0b596] 
-                                        ">Practice areas single</Link>
-                                    </li>
-                                </ul>
-                            </li>
-                            <li className="relative inline-block group">
-                                <Link onClick={ClickHandler} href="/" className="relative group text-[15px] lg:text-[14px] py-[35px] xl:py-[30px] px-[18px] xl:px-[6px] text-white block uppercase font-base-font font-normal hover:text-[#c0b596] transition-all
-                                ">Casec</Link>
-                                <ul className="absolute w-[240px]  left-0 top-[110%] p-[20px] z-[111]  bg-[#fff] shadow-[#3e419f17]  transition-all  opacity-0 invisible group-hover:opacity-100  group-hover:top-full group-hover:visible">
-                                    <li>
-                                        <Link onClick={ClickHandler} href="/case-stadies" className="text-[15px] lg:text-[14px] inline-block py-[5px] uppercase text-[#333] group relative overflow-hidden font-normal transition-all hover:text-[#c0b596] 
-                                        ">Cases</Link>
-                                    </li>
-
-                                    <li>
-                                        <Link onClick={ClickHandler} href="/case-single/Business-Accounting" className="text-[15px] lg:text-[14px] inline-block py-[5px] uppercase text-[#333] group relative overflow-hidden font-normal transition-all hover:text-[#c0b596] 
-                                        ">Case single</Link>
-                                    </li>
-                                </ul>
-                            </li>
-                            <li className="relative inline-block group">
-                                <Link onClick={ClickHandler} href="/" className="relative group text-[15px] lg:text-[14px] py-[35px] xl:py-[30px] px-[18px] xl:px-[6px] text-white block uppercase font-base-font font-normal hover:text-[#c0b596] transition-all
-                               ">News</Link>
-                                <ul className="absolute w-[240px]  left-0 top-[110%] p-[20px] z-[111]  bg-[#fff] shadow-[#3e419f17]  transition-all  opacity-0 invisible group-hover:opacity-100  group-hover:top-full group-hover:visible">
-                                    <li>
-                                        <Link onClick={ClickHandler} href="/blog" className="text-[15px] lg:text-[14px] uppercase inline-block py-[5px] text-[#333] group relative overflow-hidden font-normal transition-all hover:text-[#c0b596] 
-                                        ">Blog right sidebar</Link>
-                                    </li>
-
-                                    <li>
-                                        <Link onClick={ClickHandler} href="/blog-left-sidebar" className="text-[15px] lg:text-[14px] inline-block py-[5px] uppercase text-[#333] group relative overflow-hidden font-normal transition-all hover:text-[#c0b596] 
-                                        ">Blog left sidebar</Link>
-                                    </li>
-
-                                    <li>
-                                        <Link onClick={ClickHandler} href="/blog-fullwidth" className="text-[15px] lg:text-[14px] inline-block py-[5px] uppercase text-[#333] group relative overflow-hidden font-normal transition-all hover:text-[#c0b596] 
-                                        ">Blog fullwidth</Link>
-                                    </li>
-
-                                    <li className="relative group/group-2">
-                                        <Link onClick={ClickHandler} href="/" className="text-[15px] lg:text-[14px] inline-block py-[5px] uppercase text-[#333] group relative overflow-hidden font-normal transition-all hover:text-[#c0b596] 
-                                        ">Blog details</Link>
-                                        <ul className="absolute w-[240px]  left-[120%] xl:left-[0] xl:right-[120%] top-0 p-[20px] z-[111]  bg-[#fff] shadow-[#3e419f17] opacity-0 invisible  transition-all group-hover/group-2:opacity-100  group-hover/group-2:left-[110%] xl:group-hover/group-2:left-[auto] xl:group-hover/group-2:right-[110%] group-hover/group-2:visible">
-                                            <li>
-                                                <Link onClick={ClickHandler} href="/blog-single/Who-Can-a-Victim-Sue-after-a-Car-Accident" className="text-[15px] lg:text-[14px] inline-block py-[5px] uppercase text-[#333] group relative overflow-hidden font-normal transition-all hover:text-[#c0b596] 
-                                                ">Blog details right sidebar</Link>
-                                            </li>
-
-                                            <li>
-                                                <Link onClick={ClickHandler} href="/blog-single-left-sidebar/Who-Can-a-Victim-Sue-after-a-Car-Accident" className="text-[15px] lg:text-[14px] inline-block py-[5px] uppercase text-[#333] group relative overflow-hidden font-normal transition-all hover:text-[#c0b596] 
-                                                ">Blog details left sidebar</Link>
-                                            </li>
-
-                                            <li>
-                                                <Link onClick={ClickHandler} href="/blog-single-fullwidth/Who-Can-a-Victim-Sue-after-a-Car-Accident" className="text-[15px] lg:text-[14px] inline-block py-[5px] uppercase text-[#333] group relative overflow-hidden font-normal transition-all hover:text-[#c0b596] 
-                                                ">Blog details fullwidth</Link>
-                                            </li>
-                                        </ul>
-                                    </li>
-                                </ul>
-                            </li>
-                            <li className="relative inline-block group">
-                                <Link onClick={ClickHandler} href="/" className="relative group text-[15px] lg:text-[14px] py-[35px] xl:py-[30px] px-[18px] xl:px-[6px] text-white block uppercase font-base-font font-normal hover:text-[#c0b596] transition-all
-                              ">Pages</Link>
-                                <ul className="absolute w-[240px]  left-0 top-[110%] p-[20px] z-[111]  bg-[#fff] shadow-[#3e419f17]  transition-all  opacity-0 invisible group-hover:opacity-100  group-hover:top-full group-hover:visible">
-                                    <li>
-                                        <Link onClick={ClickHandler} href="/Attorneys" className="text-[15px] lg:text-[14px] inline-block py-[5px] uppercase text-[#333] group relative overflow-hidden font-normal transition-all hover:text-[#c0b596] 
-                                        ">Attorneys</Link>
-                                    </li>
-
-                                    <li>
-                                        <Link onClick={ClickHandler} href="/attorneys-single/Willam-Stephen" className="text-[15px] lg:text-[14px] inline-block py-[5px] uppercase text-[#333] group relative overflow-hidden font-normal transition-all hover:text-[#c0b596] 
-                                        ">Attorney Single</Link>
-                                    </li>
-                                </ul>
-                            </li>
-                            <li className="relative inline-block">
-                                <Link onClick={ClickHandler} href="/contact" className="relative group text-[15px] lg:text-[14px] py-[35px] xl:py-[30px] px-[18px] xl:px-[6px] text-white block uppercase font-base-font font-normal hover:text-[#c0b596] transition-all
-                               ">Contact</Link>
-                            </li>
-                        </ul>
-                        <div className="text-right relative before:absolute before:w-[1px] before:h-full py-[37px]  pl-[37px] lg:pl-[20px]
-                         before:bg-[rgba(255,255,255,.07)] before:bottom-0 before:left-0 before:content-[''] ">
-                            <ul>
-                                <li className="relative header-search-form-wrapper">
-                                    <div className="cart-search-contact text-right text-white border-left cursor-pointer border-[rgba(255,255,255,.07)]">
-                                        <div className="search-toggle-btn" onClick={() => setMenuState(!menuActive)}>
-                                            <i className={`fi ti-search ${menuActive ? "ti-close" : "fi "}`}></i>
-                                        </div>
-                                    </div>
-                                    <ul className={`header-search-form absolute right-0 top-[300%] w-[263px] bg-white z-20 p-[15px]  transform text-center transition-all opacity-0 invisible  ${menuActive ? "header-search-content-toggle" : ""}`}>
-                                        <li>
-                                            <form action="search" className="relative" onSubmit={SubmitHandler}>
-                                                <input className="bg-white w-full h-[40px] pl-[10px] pr-[40px] focus-visible:outline-0 border border-[rgba(64,59,59,0.07)]" type="text" placeholder="search here.." />
-                                                <button className="absolute right-0 top-0 w-[40px] h-[40px] bg-[#272c3f] text-white border-0"><i className="fa fa-search "></i></button>
-                                            </form>
-                                        </li>
-                                    </ul>
-                                </li>
-                            </ul>
+                        <div className="flex items-center text-white">
+                            <i className="fa fa-phone text-[#cbbc99] text-xl w-8"></i>
+                            <span className="text-sm">3164-5456854</span>
+                        </div>
+                        <div className="flex items-center text-white">
+                            <i className="fa fa-clock-o text-[#cbbc99] text-xl w-8"></i>
+                            <span className="text-sm">9AM - PM</span>
                         </div>
                     </div>
                 </div>

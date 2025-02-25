@@ -7,39 +7,38 @@ const Features = (props) => {
                 <div className="grid grid-cols-12 gap-3">
                     <div className="col-span-4 md:col-span-6 sm:col-span-12 mb-5">
                         <div className="bg-white flex items-center sm:mx-[30px] col:mx-0">
-                            <div className="bg-[#c0b596] h-[100px] col:h-[80px] col:w-[80px] w-[100px] text-center px-[18px] col:p-0">
-                                <i className="fi flaticon-lawyer text-[60px] col:text-[50px] col:leading-[55px] text-white"></i>
+                            <div className="bg-[#c0b596] h-[100px] col:h-[80px] col:w-[80px] w-[100px] text-center px-[18px] col:p-0 flex items-center justify-center">
+                                <i className="fa fa-handshake-o text-[60px] col:text-[50px] col:leading-[55px] text-white"></i>
                             </div>
                             <div className="pl-[24px]">
-                                <span className="text-[#ada282] text-[16px] font-normal">Book Your</span>
-                                <h3 className="text-[#333] text-[27px] col:text-[22px] font-medium">Appointment</h3>
+                                <span className="text-[#ada282] text-[16px] font-normal">Business</span>
+                                <h3 className="text-[#333] text-[27px] col:text-[22px] font-medium">Consultation</h3>
                             </div>
                         </div>
                     </div>
                     <div className="col-span-4 md:col-span-6 sm:col-span-12 mb-5">
                         <div className="bg-white flex items-center sm:mx-[30px] col:mx-0">
-                            <div className="bg-[#c0b596] h-[100px] col:h-[80px] col:w-[80px] w-[100px] text-center px-[18px] col:p-0">
-                                <i className="fi flaticon-scale text-[60px] col:text-[50px] col:leading-[55px] text-white"></i>
+                            <div className="bg-[#c0b596] h-[100px] col:h-[80px] col:w-[80px] w-[100px] text-center px-[18px] col:p-0 flex items-center justify-center">
+                                <i className="fa fa-line-chart text-[60px] col:text-[50px] col:leading-[55px] text-white"></i>
                             </div>
                             <div className="pl-[24px]">
-                                <span className="text-[#ada282] text-[16px] font-normal">Get Free</span>
-                                <h3 className="text-[#333] text-[27px] col:text-[22px] font-medium">Expert Advice</h3>
+                                <span className="text-[#ada282] text-[16px] font-normal">Strategic</span>
+                                <h3 className="text-[#333] text-[27px] col:text-[22px] font-medium">Planning</h3>
                             </div>
                         </div>
                     </div>
                     <div className="col-span-4 md:col-span-6 sm:col-span-12 mb-5">
                         <div className="bg-white flex items-center sm:mx-[30px] col:mx-0">
-                            <div className="bg-[#c0b596] h-[100px] col:h-[80px] col:w-[80px] w-[100px] text-center px-[18px] col:p-0">
-                                <i className="fi flaticon-network text-[60px] col:text-[50px] col:leading-[55px] text-white"></i>
+                            <div className="bg-[#c0b596] h-[100px] col:h-[80px] col:w-[80px] w-[100px] text-center px-[18px] col:p-0 flex items-center justify-center">
+                                <i className="fa fa-briefcase text-[60px] col:text-[50px] col:leading-[55px] text-white"></i>
                             </div>
                             <div className="pl-[24px]">
-                                <span className="text-[#ada282] text-[16px] font-normal">You Can Easily</span>
-                                <h3 className="text-[#333] text-[27px] col:text-[22px] font-medium">Join Our Team</h3>
+                                <span className="text-[#ada282] text-[16px] font-normal">Business</span>
+                                <h3 className="text-[#333] text-[27px] col:text-[22px] font-medium">Solutions</h3>
                             </div>
                         </div>
                     </div>
                 </div>
-
             </div>
         </div>
     )

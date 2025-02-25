@@ -1,74 +1,81 @@
 import React from "react";
-import Slider from "react-slick";
-import "slick-carousel/slick/slick.css";
-import "slick-carousel/slick/slick-theme.css";
-import ts1 from '/public/images/testimonial/2.png'
-import ts2 from '/public/images/testimonial/2.png'
-
-import tright from '/public/images/testimonial/1.png'
+import Link from "next/link";
 import Image from "next/image";
-
+import businessImg from '/public/images/testimonial/1.png';
 
 const Testimonial = (props) => {
-
-    var settings = {
-        dots: true,
-        arrows: false,
-        speed: 1000,
-        slidesToShow: 1,
-        slidesToScroll: 1,
-        autoplay: true,
-    };
-
-    const testimonial = [
+    const businessOptions = [
         {
-            tsImg: ts1,
-            Des: "“Elementum viverra tortor rhoncus nunc. Nunc proin lacinia interdum nulla fusce nam. Sagittis dolor hendrerit donec in eu, facilisis lobortis. Hendr laoret pretium veslum egestas.”",
-            Title: 'Milani Harverd',
-            Sub: "CEO Of GRK Egency",
+            title: "Business Start-Up in Dubai Mainland",
+            description: "Do you wish to establish your own business in Dubai? If yes, then the Mainland is the best area to get started. It is the perfect area giving opportunities to the private sector, designated by the Dubai Economic Department(DED). Get the chance to begin your new business in Dubai with high-quality standards.",
+            icon: "fa fa-building"
         },
         {
-            tsImg: ts2,
-            Des: "“Elementum viverra tortor rhoncus nunc. Nunc proin lacinia interdum nulla fusce nam. Sagittis dolor hendrerit donec in eu, facilisis lobortis. Hendr laoret pretium veslum egestas.”",
-            Title: 'Aliza Anney',
-            Sub: "Model Belarus",
+            title: "Business Start-Up in Freezone",
+            description: "The economy of the UAE is based on two main sectors, which include Onshore and Offshore sectors. Relevant authorities assign the Freezones where the foreigners can completely own the companies. Here, they do not require a local partner with 51%. We suggest you go for the Freezone if you are a foreigner.",
+            icon: "fa fa-globe"
         }
-    ]
-    return (
+    ];
 
-        <section className={`relative ${props.tClass}`}>
+    const ClickHandler = () => {
+        window.scrollTo(10, 0);
+    }
+
+    return (
+        <section className={`relative bg-[#f8f8f8] ${props.tClass}`}>
             <div className="wraper">
-                <div className="grid grid-cols-12 gap-3">
-                    <div className="col-span-4 md:col-span-6 sm:col-span-12 sm:order-2">
-                        <div className="testimonial-img sm:text-center sm:max-w-[70%] sm:mx-auto">
-                            <Image src={tright} alt="" />
+                <div className="grid grid-cols-12 gap-8 items-center">
+                    <div className="col-span-5 md:col-span-6 sm:col-span-12 sm:order-2">
+                        <div className="relative">
+                            <div className="relative z-10">
+                                <Image 
+                                    src={businessImg} 
+                                    alt="Business Setup in Dubai" 
+                                    className="rounded-lg shadow-xl"
+                                />
+                            </div>
+                            <div className="absolute -bottom-6 -right-6 w-full h-full border-2 border-[#c0b596] rounded-lg z-0"></div>
                         </div>
                     </div>
-                    <div className="col-span-8 md:col-span-6 sm:col-span-12 sm:order-1">
-                        <div className="testimonial-text ml-[95px] mt-[50px] md:ml-0">
-                            <div className="text-left sm:text-center">
-                                <span className="text-[16px] text-[#ada282]">What People Say</span>
-                                <h2 className="text-[36px] md:text-[26px] font-medium text-[#333] pb-[20px] relative 
-                        before:absolute before:content-[''] before:left-[-68px] 
-                        before:top-[30px] before:transform before:-translate-y-1/2 
-                        before:w-[60px] before:h-[1px] before:bg-[#c0b596] md:before:hidden">Client Testimonial</h2>
+                    <div className="col-span-7 md:col-span-6 sm:col-span-12 sm:order-1">
+                        <div className="pl-8 md:pl-0">
+                            <div className="text-left sm:text-center mb-12">
+                                <span className="text-[16px] text-[#ada282] mb-2 block">Business Setup Services</span>
+                                <h2 className="text-[36px] md:text-[28px] font-medium text-[#333] pb-4 relative">
+                                    Start a Business in Dubai With Minimum Cost
+                                </h2>
+                                <p className="text-[#666] text-[16px] leading-[1.8]">
+                                    We provide our best services for setting up a new business all over UAE
+                                </p>
                             </div>
-                            <div className="testimonial-slide owl-carousel">
-                                <Slider {...settings}>
-                                    {testimonial.map((tesmnl, tsm) => (
-                                        <div className="slide-item sm:text-center" key={tsm}>
-                                            <p className="relative pt-[30px] sm:p-0 z-10 sm:pl-[20px] pl-[33px] pb-[30px] pr-[50px] mb-[20px] before:absolute before:left-[4px] before:top-[5px] before:content-['\f10d'] before:-z-10  before:font-['FontAwesome'] before:text-[#c0b596] before:text-[30px] sm:before:text-[20px]">There are many variations of passages of Lorem Ipsum available, but the majority have suffered alteration in some form, by injected humour,</p>
-                                            <div className="w-[18%] rounded-[50%] float-left sm:float-none sm:mx-auto pr-[20px] sm:pr-0">
-                                                <Image src={tesmnl.tsImg} alt="" />
+
+                            <div className="space-y-8">
+                                {businessOptions.map((option, index) => (
+                                    <div key={index} className="bg-white p-6 rounded-lg shadow-md hover:shadow-lg transition-all duration-300">
+                                        <div className="flex items-start">
+                                            <div className="flex-shrink-0 mr-4">
+                                                <div className="w-12 h-12 bg-[#c0b596] rounded-full flex items-center justify-center">
+                                                    <i className={`${option.icon} text-white text-xl`}></i>
+                                                </div>
                                             </div>
-                                            <div className="mt-[35px] sm:mt-[20px] sm:mb-[30px]">
-                                                <h4 className="text-[18px] font-semibold font-base-font">{tesmnl.Title}</h4>
-                                                <span className="text-[16px] text-[#666]">{tesmnl.Sub}</span>
+                                            <div>
+                                                <h3 className="text-[22px] font-semibold text-[#272c3f] mb-3">
+                                                    {option.title}
+                                                </h3>
+                                                <p className="text-[#666] text-[15px] leading-[1.8] mb-4">
+                                                    {option.description}
+                                                </p>
+                                                <Link 
+                                                    onClick={ClickHandler} 
+                                                    href="/contact"
+                                                    className="inline-block text-[#c0b596] text-[14px] font-semibold hover:text-[#272c3f] transition-all duration-300"
+                                                >
+                                                    Learn More →
+                                                </Link>
                                             </div>
                                         </div>
-                                    ))}
-                                </Slider>
-
+                                    </div>
+                                ))}
                             </div>
                         </div>
                     </div>

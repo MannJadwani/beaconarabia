@@ -25,8 +25,8 @@ const About = (props) => {
                     <div className="col-span-6 md:col-span-12">
                         <div className="mb-[20px]">
                             <h2 className="text-[#282e3f] text-[32px]">About Us</h2>
-                            <p className="text-[#666] text-[15px] leading-[28px] mb-[30px]">Contrary to popular belief, Lorem Ipsum is not simply random text. It has roots in a piece of classical Latin literature from 45 BC, making it over 2000 years old. Richard McClintock, a Latin professor at ,</p>
-                            <p className="text-[#666] text-[15px] leading-[28px] mb-[30px]"> and going through the cites of the word in classical literature, discovered the undoubtable source. Lorem Ipsum comes from sections 1.10.32 and 1.10.33 of "de Finibus Bonorum et Malorum</p>
+                            <p className="text-[#666] text-[15px] leading-[28px] mb-[30px]">We are a full-service business consulting company founded by Pratapsingh Nathani, a visionary leader with over 30 years of extensive experience in the industry.</p>
+                            <p className="text-[#666] text-[15px] leading-[28px] mb-[30px]">At our core, we believe in the excellence of work. Our commitment to delivering exceptional service and innovative solutions has made us a trusted partner for businesses seeking growth and success in the region.</p>
                             <div className="mb-[50px] col:mb-[20px]">
                                 <Link onClick={ClickHandler} href="/about" className="bg-[#c0b596] cursor-pointer text-[16px] font-semibold text-white px-[38px] py-[10px]  capitalize inline-block mt-[6px] transition ease-in-out duration-300 hover:bg-[#d4c291]
                                 col:mb-[5px] col:mt-[15px] col:text-[15px] col:px-[18px] col:py-[8px] 

@@ -43,7 +43,7 @@ const Footer = (props) => {
                                 <li className="relative mb-[8px] block"><Link className=" text-white hover:text-[#c0b596] transition-all" href="/home">Home</Link></li>
                                 <li className="relative mb-[8px] block"><Link className=" text-white hover:text-[#c0b596] transition-all" href="/about">Who We Are</Link></li>
                                 <li className="relative mb-[8px] block"><Link className=" text-white hover:text-[#c0b596] transition-all" href="/practice">Company Formation</Link></li>
-                                <li className="relative mb-[8px] block"><Link className=" text-white hover:text-[#c0b596] transition-all" href="/practice">Our Solutions</Link></li>
+                                <li className="relative mb-[8px] block"><Link className=" text-white hover:text-[#c0b596] transition-all" href="/">Our Solutions</Link></li>
                                 <li className="relative mb-[8px] block"><Link className=" text-white hover:text-[#c0b596] transition-all" href="/contact">Reach Us</Link></li>
                             </ul>
                         </div>
@@ -63,8 +63,8 @@ const Footer = (props) => {
                             </div>
                             <ul>
                                 <li className="relative mb-[8px] block text-white">Head Office Address</li>
-                                <li className="relative mb-[8px] block text-white">121 King Street, Melbourne West,</li>
-                                <li className="relative mb-[8px] block text-white">Australia</li>
+                                <li className="relative mb-[8px] block text-white">Building A1, Dubai Digital Park,</li>
+                                <li className="relative mb-[8px] block text-white">Dubai Silicon Oasis, Dubai, UAE</li>
                                 <li className="relative mb-[8px] block text-white">Phone: 888 123-4587</li>
                                 <li className="relative mb-[8px] block text-white">Email: info@example.com</li>
                             </ul>

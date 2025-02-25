@@ -25,10 +25,11 @@ const Header3 = (props) => {
                     <div className="grid grid-cols-12">
                         <div className="col-span-10 md:col-span-12">
                             <ul className="text-left md:text-center">
-                                <li className=" text-white inline-block p-[15px]  col:pr-0 pl-0 col:pb-[0]"><i className="fa fa-map-marker pr-[10px] col:pt-[0] text-[#cbbc99] text-[20px]" aria-hidden="true"></i>121 King Street, Melbourne , Australia</li>
-                                <li className="relative text-white inline-block p-[15px]  col:pr-0
-                        before:absolute before:content-[''] before:left-0 before:top-[15px] before:w-[1px] before:h-[25px] before:bg-[rgba(255,255,255,.07)]  before:z-10 before:transform before:-translate-x-1/2 md:before:hidden">
-                                    <i className="fa fa-mobile pr-[10px] text-[#cbbc99] text-[20px]" aria-hidden="true"></i>3164-5456854</li>
+                                <li className="text-[#666] text-[15px] float-left pr-[30px]">
+                                    <i className="fa fa-map-marker text-[#c0b596] pr-[10px] text-[20px]" aria-hidden="true"></i>
+                                    Building A1, Dubai Digital Park, Dubai Silicon Oasis, Dubai, UAE
+                                </li>
+                                <li className="relative text-white inline-block p-[15px]  col:pr-0 pl-0 col:pb-[0]"><i className="fa fa-mobile pr-[10px] text-[#cbbc99] text-[20px]" aria-hidden="true"></i>3164-5456854</li>
                                 <li className="relative text-white inline-block p-[15px] col:pr-0  before:absolute before:content-[''] before:left-0 before:top-[15px] before:w-[1px] before:h-[25px] before:bg-[rgba(255,255,255,.07)] md:before:hidden  before:z-10 before:transform before:-translate-x-1/2 "><i className="fa fa-clock-o pr-[10px] text-[#cbbc99] text-[20px]" aria-hidden="true"></i>9AM - PM</li>
                             </ul>
                         </div>
@@ -72,8 +73,8 @@ const Header3 = (props) => {
                                 <Link onClick={ClickHandler} href="/about" className="relative group text-[15px] lg:text-[14px] py-[35px] xl:py-[30px] px-[18px] xl:px-[6px] text-white block uppercase font-base-font font-normal hover:text-[#c0b596] transition-all
                                ">Who We Are</Link>
                             </li>
-                            <li className="relative inline-block group">
-                                <Link onClick={ClickHandler} href="/" className="relative group text-[15px] lg:text-[14px] py-[35px] xl:py-[30px] px-[18px] xl:px-[6px] text-white block uppercase font-base-font font-normal hover:text-[#c0b596] transition-all
+                            <li className="relative inline-block">
+                                <Link onClick={ClickHandler} href="/practice" className="relative group text-[15px] lg:text-[14px] py-[35px] xl:py-[30px] px-[18px] xl:px-[6px] text-white block uppercase font-base-font font-normal hover:text-[#c0b596] transition-all
                               ">Our Solutions</Link>
                                 <ul className="absolute w-[240px]  left-0 top-[110%] p-[20px] z-[111]  bg-[#fff] shadow-[#3e419f17]  transition-all  opacity-0 invisible group-hover:opacity-100  group-hover:top-full group-hover:visible">
                                     <li>

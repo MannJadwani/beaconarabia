@@ -24,11 +24,7 @@ const HomePage = () => {
             <Practice />
             <CaseStudies />
             <Testimonial />
-            <ConsultingArea />
             <Attorney />
-            <FunFact />
-            <BlogSection />
-            <Newsletter />
             <Footer />
             <Scrollbar />
         </Fragment>
