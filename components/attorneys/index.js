@@ -1,7 +1,7 @@
 import React from 'react'
 import Link from "next/link";
 import Image from 'next/image';
-import founderImg from '/public/images/team/founder.jpg';
+import founderImg from '/public/images/team/founder.png';
 
 const Attorney = (props) => {
     const ClickHandler = () => {
@@ -46,7 +46,7 @@ const Attorney = (props) => {
                                         alt={founderInfo.name}
                                         width={400}
                                         height={500}
-                                        className="rounded-lg shadow-xl w-full"
+                                        className="rounded-lg shadow-xl w-full z-10 bg-white"
                                     />
                                 </div>
                                 <div className="absolute -bottom-6 -right-6 w-full h-full border-2 border-[#c0b596] rounded-lg z-0"></div>

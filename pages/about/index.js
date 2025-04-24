@@ -5,7 +5,7 @@ import Footer from '../../components/footer/Footer';
 import Scrollbar from '../../components/scrollbar/scrollbar';
 import Image from 'next/image';
 import Link from 'next/link';
-import founderImg from '/public/images/team/founder.jpg';
+import founderImg from '/public/images/team/founder.png';
 
 const AboutPage = () => {
     const services = [
@@ -68,7 +68,7 @@ const AboutPage = () => {
                                         alt="Pratapsingh Nathani"
                                         width={600}
                                         height={800}
-                                        className="w-full h-auto object-cover"
+                                        className="w-full h-auto object-cover z-10 bg-white"
                                         priority
                                     />
                                 </div>
